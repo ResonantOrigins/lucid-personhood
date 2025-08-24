@@ -1,0 +1,34 @@
+name: Feedback / Reproducibility Report
+description: Run a demo, attach sanitized JSONL logs, and provide critique
+labels: [triage/feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing. Please attach sanitized logs from `/logs`.
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      description: e.g., gpt-4o-mini, claude-2.1, etc.
+      placeholder: gpt-4o-mini
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact command, env, and any changes
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings
+      description: Meaningful markers, anomalies, divergences observed
+  - type: textarea
+    id: critique
+    attributes:
+      label: Methodological critique
+      description: Blind spots, threats to validity, missing controls
+  - type: textarea
+    id: literature
+    attributes:
+      label: Suggested literature
+      description: Links or citations we should consider
